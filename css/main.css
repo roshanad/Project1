@@ -9,7 +9,6 @@ body {
 	font-family: 'monospace', sans-serif;
 	line-height: 1.4;
 	color: #fff;
-
 }
 h1 {
   font-size: 24px;
@@ -32,9 +31,18 @@ h1 {
   text-align: center;
   padding: 20px;
 }
+#testQuestion h2 {
+	font-size: 24px;
+	color: gray;
+}
 
+#questionNum {
+	font-size: 24px;
+	color: #006699;
+	font-weight: bold;
+}
 .button {
-  background: orange;
+  background: green;
   color: white;
   width: 200px;
   height: 50px;
@@ -55,4 +63,8 @@ h1 {
   margin: auto;
   margin-top: 20px;
   border-radius: 10px;
+}
+#question {
+	font-size: 24px;
+	text-align: left;
 }

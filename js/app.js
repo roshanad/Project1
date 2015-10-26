@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
     $('#testQuestion').hide();
-    // $('#messagebox').hide();
+   $('#messagebox').hide();
     var questions = [
       { question: 'What does HTML stand for?',
       choices: ['Hyperlinks and Text Markup Language','Hyper Text Markup Language', 'Home Tool Markup Language'],
