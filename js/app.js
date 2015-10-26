@@ -25,15 +25,42 @@ $(document).ready(function() {
       questionDisplay();
     });
 
-    //display the questions and multiple choices answer list
+
+    //display the questions and multiple choice list
     function questionDisplay() {
       $('#questionNum').text("Question " + (questionNum+1) + " of " + totalQuestion);
       $('#question').text(questions[questionNum].question);
       $('#choices').empty();
       var choiceTotal = questions[questionNum].choices.length;
+      var answerChoices = questions[questionNum];
       console.log(choiceTotal);
-      for (var i=0; i<choiceTotal; i++) {                  //displays the answer choices
-      $('#choices').append("<input type='radio' class='guess' name='guess' value=" + i + ">" + questions[questionNum].choices[i] + "<br>");
+      for (var i=0; i<choiceTotal; i++) {
+      $('#choices').append("<input type='radio' class='guess' name='guess' value=" + i + "> " + answerChoices.choices[i] + "<br>");
       }
     }
+
+    $("#submit").on('click', function(){
+      console.log("Yay Submit Answer Button is clicked");
+      var answer = $('input:radio[name=guess]:checked').val();
+      var rightAnswer = questions[questionNum].correct;
+      console.log(rightAnswer);
+      if (answer == null){
+        $('#messagebox').show();
+        console.log("Writing in messagebox");
+        $('#message').html("<p>Please Select an Answer.</p>");
+      }
+      else if (answer == rightAnswer)
+      {
+        $('#messagebox').show();
+        $('#message').html("<p>YOU GOT IT!!! CONGRATS!!!</p>");
+        correctAnswer++;
+      }
+      else {
+        console.log("Opps got wrong answer");
+        var getrightAnswer = questions[questionNum].choices[rightAnswer];
+        $('#messagebox').show();
+        $('#message').html("<p>The Correct Answer is: " + "<span class=black>" + getrightAnswer + "</span>" + "</p>");
+        console.log(getrightAnswer);
+      }
+    });
 });
