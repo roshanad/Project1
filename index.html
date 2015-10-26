@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Web Developer - Quiz</title>
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Lato:300,400,700' rel='stylesheet' type='text/css'>
+<!-- CSS Files -->
+  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="stylesheet" href="css/normalize.css"/>
+</head>
+<body>
+  <header>
+    <h1>Web Developer Quiz</h1>
+  </header>
+
+  <div id="quizbox">
+
+    <div id="startQuiz">
+      <h2>Welcome to HTML5 Quiz</h2>
+      <p>You will get 1 point for each correct answer. At the end of the Quiz, your total score will be displayed.</p>
+      <input id="startQuizButton" class='button' type="submit" value="Start the Quiz">
+    </div>
+
+    <div id="testQuestion">
+      <h2>Please Select Your Answer and Click Submit</h2>
+      <p id="questionNum">Question:</p>
+      <p id="question"></p>
+      <div id = "choices"></div>
+      <input type= 'submit' id='submit' class='button'>
+      </div>
+    </div>
+
+      <div id="messagebox">
+          <div id="message"></div>
+        </div>
+  </div>
+</body>
+<!-- Javascript Files -->
+  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+	<script src="js/app.js"></script>
+</html>
