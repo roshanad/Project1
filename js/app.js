@@ -25,12 +25,13 @@ $(document).ready(function() {
       questionDisplay();
     });
 
-    //display the questions
+    //display the questions and multiple choices answer list
     function questionDisplay() {
       $('#questionNum').text("Question " + (questionNum+1) + " of " + totalQuestion);
       $('#question').text(questions[questionNum].question);
       $('#choices').empty();
       var choiceTotal = questions[questionNum].choices.length;
+      console.log(choiceTotal);
       for (var i=0; i<choiceTotal; i++) {                  //displays the answer choices
       $('#choices').append("<input type='radio' class='guess' name='guess' value=" + i + ">" + questions[questionNum].choices[i] + "<br>");
       }
