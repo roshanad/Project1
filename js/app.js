@@ -2,8 +2,8 @@ $(document).ready(function() {
   $('#testQuestion').hide();
   $('#messagebox').hide();
   $('.timer').hide();
-  var questions = [
-      { question: 'What is the full form of HTML?',
+  var questions = [ {
+      question: 'What is the full form of HTML?',
       choices: ['Hyperlinks and Text Markup Language','Hyper Text Markup Language', 'Hypertext Machine Language', 'Home Tool Markup Language'],
       correct: 1
     },
@@ -63,7 +63,7 @@ $(document).ready(function() {
       $('#choices').empty();
       var choiceTotal = questions[questionNum].choices.length;
       var answerChoices = questions[questionNum];
-      console.log(choiceTotal);
+      // console.log(choiceTotal);
       for (var i=0; i<choiceTotal; i++) {
       $('#choices').append("<input type='radio' class='guess' name='guess' value=" + i + "> " + answerChoices.choices[i] + "<br>");
       }
@@ -74,12 +74,12 @@ $(document).ready(function() {
       var interval = setInterval(function(){
         seconds++;
           $('.timer').html("<p>Time Spent: " + seconds + "s"+ "</p>");
-        console.log("this is updated text")
+        // console.log("this is updated text")
     }, 1500)
   }
 
     $('#startQuizButton').on('click', function(){
-      console.log("Start Key Button clicked");
+      // console.log("Start Key Button clicked");
       $('#startQuiz').hide();
       $('#testQuestion').show();
       $('.timer').show();
@@ -88,35 +88,35 @@ $(document).ready(function() {
     });
 
     $('#testQuestion').on('click', '#submit', function(){
-      console.log("Yay Submit Answer Button is clicked");
+      // console.log("Yay Submit Answer Button is clicked");
       var answer = $('input:radio[name=guess]:checked').val();
       var rightAnswer = questions[questionNum].correct;
-      console.log(rightAnswer);
+      // console.log(rightAnswer);
       //Check if the answer is null user is forced to submit one answer
       // If that is right answer then add message on message box and button to continue
       // If it's wrong answer then displays wrong answer and add button to continue
       if (answer == null){
         $('#messagebox').show();
-        console.log("Writing in messagebox");
+        // console.log("Writing in messagebox");
         $('#message').html("<p>Please select an answer.</p>");
       }
       else if (answer == rightAnswer)
       {
         $('#messagebox').show();
-        $('#message').html('<img src="/img/facesmiley.jpg" alt="someimage" />'+"<p>Correct</p>" + "</p><input id='continue' class='button' type='submit' value='Continue'>" + "</p>");
+        $('#message').html("<img scr='../img/smiley.jpg alt='SOME TEXT'/>" + "<p>Correct</p>" + "</p><input id='continue' class='button' type='submit' value='Continue'>" + "</p>");
         correctAnswer++;
       }
       else {
-        console.log("Incorrect");
+        // console.log("Incorrect");
         var getRightAnswer = questions[questionNum].choices[rightAnswer];
         $('#messagebox').show();
-        $('#message').html("<p>The Correct Answer is: " + "<span class=black>" + getRightAnswer + "</span>" + "</p>" + "</p><input id='continue' class='button' type='submit' value='Continue'>" + "</p>");
-        console.log(getRightAnswer);
+        $('#message').html("<p>The Correct Answer is: </p>" + "<p>" + "<span class=black>" + getRightAnswer + "</span>" + "</p>" + "</p><input id='continue' class='button' type='submit' value='Continue'>" + "</p>");
+        // console.log(getRightAnswer);
       }
     });
 
     $('#message').on('click', '#continue', function(){
-      console.log("Yay I am clicking submit function on message");
+      // console.log("Yay I am clicking submit function on message");
       if (questionNum+1 == totalQuestion)
       {
         $('#message').html("<p>You have answered " + "<span class=red>" + correctAnswer + "</span>" + " questions correctly out of " + "<span class=red>" + totalQuestion + "</span>" + " questions.");
@@ -125,12 +125,11 @@ $(document).ready(function() {
         $('#startQuiz').show();
       }
       else {
-        console.log("I am here ****")
+        // console.log("I am here ****")
         questionNum++;
-        console.log("QuestionNum");
+        // console.log("QuestionNum");
         $('#messagebox').hide();
         questionDisplay();
       }
     });
-
 });
