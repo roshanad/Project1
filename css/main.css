@@ -3,37 +3,61 @@
 	box-sizing: border-box;
 }
 
-/* Style begins here */
+/* Styles */
+
 body {
-	background: #324D5C;
-	font-family: 'monospace', sans-serif;
+	background: #d4d6d6;
+	font-family: 'Noto Sans', sans-serif;
 	line-height: 1.4;
 	color: #fff;
 }
+
 h1 {
-  font-size: 24px;
-  text-align: center;
+  font-size: 40px;
+  /*text-align: center;*/
   text-transform: uppercase;
   margin-top: 20px;
+	font-weight: bolder;
+	margin-left: 50px;
+}
+/* Container Div */
+.container {
+	margin: auto;
+	width: 1000px;
 }
 
+.container img {
+	height: 80px;
+	margin-left: 250px;
+	margin-top:50px;
+}
 #startQuiz p {
 	color: gray;
 }
 #quizbox {
   background: white;
+	border-top:60px solid #324D5C;
   color: black;
   margin: auto;
-  height: 400px;
-  width: 800px;
-  margin-top: 50px;
-  border-radius: 2%;
+  height: 500px;
+  width: 600px;
+  border-radius: 15px;
   text-align: center;
   padding: 20px;
+	opacity: 0.8;
+	float:left;
+	margin-left: 50px;
 }
 #testQuestion h2 {
 	font-size: 24px;
 	color: gray;
+	font-weight: bold;
+}
+
+.red {
+	font-size: 40px;
+	color: red;
+	text-align: center;
 }
 
 #questionNum {
@@ -41,28 +65,53 @@ h1 {
 	color: #006699;
 	font-weight: bold;
 }
+
 .button {
   background: #009933;
   color: white;
-  width: 200px;
+  width: 150px;
   height: 50px;
   font-size: 20px;
   border-radius: 10px;
 }
+
 .button:hover {
   background: #007DA7;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset;
 }
 
-#messagebox {
-  font-size: 16px;
-  text-align: center;
-  background-color: white;
-  height: 100px;
-  width: 800px;
+.timer {
+	font-size: 16px;
+	text-align: center;
+	background: white;
+	border-top:40px solid #324D5C;
+	height: 150px;
+  width: 200px;
   margin: auto;
   margin-top: 10px;
   border-radius: 10px;
+	opacity: 0.8;
+	float: right;
+	margin-right: 50px;
+}
+
+.timer p {
+	color: black;
+}
+#messagebox {
+  font-size: 16px;
+  text-align: center;
+	background: white;
+	border-top:40px solid #324D5C;
+  height: 300px;
+  width: 200px;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 10px;
+	opacity: 0.8;
+	float: right;
+	margin-right: 50px;
+	margin-top: 20px;
 }
 
 #message p {

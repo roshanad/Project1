@@ -3,37 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <title>Web Developer - Quiz</title>
-  <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Lato:300,400,700' rel='stylesheet' type='text/css'>
-<!-- CSS Files -->
-  <link rel="stylesheet" href="css/main.css"/>
+  <!-- Font Family  -->
+  <link href='http://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Slab' rel='stylesheet' type='text/css'/>
+  <!-- CSS Files -->
   <link rel="stylesheet" href="css/normalize.css"/>
+  <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
-  <header>
-    <h1>Web Developer Quiz</h1>
-  </header>
+<div class ="container">
+  <!-- <header> -->
+    <img src="img/frontEnd.png" alt="Html pictures"\>
+    <h1>&lt;Front<span class = 'red'>end</span>&gt; Web Development</h1>
+  <!-- </header> -->
 
   <div id="quizbox">
 
     <div id="startQuiz">
-      <h2>Welcome to HTML5 Quiz</h2>
-      <p>You will get 1 point for each correct answer. At the end of the Quiz, your total score will be displayed.</p>
+      <h2>Welcome to Frontend Web Development Quiz</h2>
+      <p>You will get 1 point for each correct answer. At the end of the quiz, your total score will be displayed.</p>
       <input id="startQuizButton" class='button' type="submit" value="Start the Quiz">
     </div>
 
     <div id="testQuestion">
-      <h2>Please Select Your Answer and Click Submit</h2>
+      <h2>Please select your answer and click submit</h2>
       <p id="questionNum">Question:</p>
       <p id="question"></p>
       <div id = "choices"></div>
-      <input type= 'submit' id='submit' class='button' value ="Submit your Answer">
+      <input type= 'submit' id='submit' class='button' value ="Submit">
       </div>
     </div>
 
-      <div id="messagebox">
+    <div class= "timer">
+      <p>Time Spent: 0:00</p>
+    </div>
+
+    <div id="messagebox">
           <div id="message"></div>
-        </div>
+    </div>
   </div>
+</div>
 </body>
 <!-- Javascript Files -->
   <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
